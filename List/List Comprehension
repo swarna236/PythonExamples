@@ -1,3 +1,8 @@
+"""Read through the input file and figure out the distribution by hour of the day for each of the messages. 
+You can pull the hour out from the 'From ' line by finding the time and then splitting the string a second time using a colon.
+Print out counts for each hour, sorted by hour """ 
+
+
 name = input("Enter file:")
 if len(name) < 1 : name = "file name"
 handle = open(name)
