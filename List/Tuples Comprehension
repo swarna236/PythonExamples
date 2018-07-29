@@ -1,0 +1,27 @@
+name = input("Enter file:")
+if len(name) < 1 : name = "file name"
+handle = open(name)
+counts = dict()
+words = list()
+time = list()
+
+for line in handle:
+    words = line.split()
+    if len(words) < 1 : continue
+    else:    
+      if (words[0] != 'From') :
+         continue
+      else:
+         time = words[5].split(":")
+         hr = time[0]
+         counts[hr] = counts.get(hr,0) + 1
+
+newlist = list()
+# print(sorted([(k,v) for k,v in counts.items()]))
+for k,v in counts.items():
+    newlist.append((k,v))
+
+newlist = sorted(newlist)
+for k,v in newlist:
+    print(k,v)
+
