@@ -1,0 +1,3 @@
+# sorting list of non-empty tuples by last element#
+
+sorted(atup , key = lambda tup:tup[-1])
